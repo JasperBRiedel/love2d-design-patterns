@@ -28,7 +28,7 @@ function love.draw()
   love.graphics.setColor(1.0, 1.0, 1.0)
   love.graphics.print("click the screen to spawn a entity - " ..
     "entities die if they leave the screen - " ..
-    #entities .. " alive entitie(s)")
+    #entities .. " entit(y/ies) alive ")
 end
 
 function create_entity(x, y, speed)
