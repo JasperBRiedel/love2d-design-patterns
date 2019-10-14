@@ -27,7 +27,7 @@ function love.draw()
 end
 
 function new_timer(interval, action)
-  timer_object = {
+  local timer_object = {
     accumulator = 0,
     interval = interval,
     action = action
