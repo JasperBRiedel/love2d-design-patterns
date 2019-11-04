@@ -59,13 +59,14 @@ function new_map(map_width, map_height, spritesheet, horizontal_tile_count, vert
     self.map[x][y] = {x = tile_x, y = tile_y}
   end
 
-  function tile_map:draw(x, y, scale)
+  function tile_map:draw(map_x, map_y, scale)
     for x = 1, self.width, 1 do
       for y = 1, self.height, 1 do
         local tile = self.map[x][y]
         love.graphics.draw(self.spritesheet, self.tiles[tile.x][tile.y], 
-          (x - 1) * self.tile_width * scale, (y - 1) * self.tile_height * scale, 0,
-          scale, scale)
+          map_x +(x - 1) * self.tile_width * scale, 
+          map_y + (y - 1) * self.tile_height * scale,
+          0, scale, scale)
       end
     end
   end
